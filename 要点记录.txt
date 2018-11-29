@@ -1,0 +1,16 @@
+1. logo 地址 http://xingke100.com/logo.png
+
+2. 内网服务器地址
+192.168.0.243
+192.168.0.244
+root
+RU2&5wp3tgwp0MIH
+
+启动 node 服务(243,244) 命令
+	cd /xkdata/www/yktServer ; pm2 start ecosystem.config.js	
+启动 fdfs 服务(244) 命令
+	/usr/local/bin/fdfs_trackerd /etc/fdfs/tracker.conf ; /usr/local/bin/fdfs_storaged /etc/fdfs/storage.conf
+启动 nginx 服务(243,244) 命令
+	cd /usr/local/nginx/sbin/ ; ./nginx
+	重启nginx
+	cd /usr/local/nginx/sbin/ ; ./nginx -s reload
